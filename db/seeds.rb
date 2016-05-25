@@ -24,6 +24,6 @@ end
 
 TodoList.all.each do |list|
 	5.times do |i|
-		list.todo_items.create!(due_date: 1.year.from_now, title: "Item #{i}", description: "Description #{i}", completed: false)
+		list.todo_items.create!(due_date: 1.year.from_now, title: "Item #{i + 1}", description: "Description #{i + 1}", completed: false)
 	end
 end

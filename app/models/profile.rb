@@ -21,4 +21,8 @@ class Profile < ActiveRecord::Base
   			or a person named Sue cannot be male -- which is nonsense, of course")
   	end
   end
+
+  def self.get_all_profiles(min_birth_year, max_birth_year)
+  	Profile.where(birth_year: min_birth_year..max_birth_year).order(:birth_year)
+  end
 end
